@@ -6,8 +6,11 @@ echo "
 	<p>เมนูที่สั่ง</p>
 	<ol>
 ";
-foreach($_REQUEST['cOrder'] AS $cOrder){
-	echo "<li> {$cOrder}</li>";
+// insert into table order
+// get order_id 201
+foreach($_REQUEST['cOrder'] AS $key => $cOrder){
+	// insert into table order_menu by order_id 201
+	echo "<li> {$cOrder} จำนวน {$_REQUEST['nQuantity'][$key]} แก้ว</li>";
 }
 echo "</ol>";
 ?>
